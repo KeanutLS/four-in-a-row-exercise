@@ -182,7 +182,7 @@ namespace PRB99.ASN.FourInOneRow
             int currentPlayerIndex = Array.IndexOf(playerSymbols, currentPlayerSymbol); // Get the index of the current player in the playerSymbols array.
 
             // Toggle to the other player
-            currentPlayerSymbol = playerSymbols[(currentPlayerIndex + 1) % playerSymbols.Length]; //we use the modulo operator to switch between the players
+            currentPlayerSymbol = playerSymbols[(currentPlayerIndex + 1) % playerSymbols.Length]; //we use the modulo to make sure the playerindex doesn't exceed the length of the first array and goes back to the first player if it does.
             if (moves == 0)
             {
                 // If it's the first move in a new game, set the currentPlayerSymbol to the symbol of the first player.
